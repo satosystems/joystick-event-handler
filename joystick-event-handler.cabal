@@ -25,13 +25,15 @@ source-repository head
 library
   exposed-modules:
       Lib
+      PlayStation2Controller
   other-modules:
       Paths_joystick_event_handler
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      SDL
+    , base >=4.7 && <5
   default-language: Haskell2010
 
 executable joystick-event-handler
@@ -42,6 +44,7 @@ executable joystick-event-handler
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      SDL
+    , base >=4.7 && <5
     , joystick-event-handler
   default-language: Haskell2010
